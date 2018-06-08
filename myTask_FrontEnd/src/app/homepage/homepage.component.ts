@@ -3,7 +3,8 @@ import { ToastrService } from 'ngx-toastr';
 import { FileSelectDirective, FileUploader} from 'ng2-file-upload';
 import { FileService } from '../file.service';
 import {saveAs} from 'file-saver';
-const uri = 'http://localhost:3000/api/upload';
+import { environment } from '../../environments/environment.prod';
+
 
 @Component({
   selector: 'app-homepage',
@@ -16,7 +17,7 @@ export class HomepageComponent implements OnInit {
 
   fileToUpload: File = null;
   
-  uploader:FileUploader = new FileUploader({url:uri, authToken:  localStorage.getItem('currentUser')} );
+  uploader:FileUploader = new FileUploader({url:environment.apiUrl+'upload', authToken:  localStorage.getItem('currentUser')} );
 
   attachmentList:any = [];
 

@@ -15,7 +15,7 @@ export class FileService {
             fileName : fn,
             ID : fileID,
         }
-        return this._http.post('http://localhost:3000/api/download',body,{
+        return this._http.post(environment.apiUrl+'download',body,{
             responseType : 'blob',
             headers:new HttpHeaders({'Content-Type':'application/json','authorization': localStorage.getItem('currentUser')})
         });
