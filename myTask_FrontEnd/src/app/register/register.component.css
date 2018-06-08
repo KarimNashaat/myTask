@@ -1,0 +1,225 @@
+#backgroundimage{
+    position: absolute;
+    left: 0;
+    
+      top: 0;
+  
+      right: 0;
+  
+      bottom: 0;
+  
+      z-index: -1;
+  
+      background-position: center;
+  
+      background-size: cover;
+  
+      background-attachment: fixed;
+  
+      background-image: url("../../assets/images/files.jpeg");
+  }
+  #backgroundimage .overlay {
+  
+    position: absolute;
+  
+    left: 0;
+  
+    top: 0;
+  
+    right: 0;
+  
+    bottom: 0;
+  
+    opacity: .6;
+  
+    background: #1C1D21;
+  
+  }
+  
+
+
+#nav {
+
+    
+
+    padding: 20px 0px;
+
+    background: #FFF;
+
+    -webkit-transition: 0.2s padding;
+
+    transition: 0.2s padding;
+
+    z-index: 999;
+
+    position: fixed;
+
+    left: 0;
+
+    right: 0;
+
+    
+
+    
+
+}
+
+
+.navbar-brand {
+
+    padding: 0px 30px;
+
+}
+
+
+
+.navbar-brand .logo-alt {
+
+    max-height: 60px;
+
+    display: block;
+
+}
+
+
+
+#nav.navbar {
+
+    border: none;
+
+    border-radius: 0;
+
+    margin-bottom: 0px;
+
+}
+
+
+
+
+
+
+
+#nav.nav-transparent {
+
+    background: transparent;
+
+}
+
+
+
+
+
+/* -- default nav -- */
+
+
+
+
+
+    .main-nav li {
+
+        padding: 10px 10px;
+
+        float: left;
+
+        
+
+
+
+    }
+
+    .main-nav li a {
+        font-family: 'Varela Round', sans-serif;
+
+        font-size: 20px;
+
+        -webkit-transition: 0.2s color;
+
+        transition: 0.2s color;
+
+        
+
+    }
+
+    .main-nav>li>a {
+
+        color: #10161A;
+
+        padding: 15px 0px;
+
+        
+
+    }
+
+    #nav.nav-transparent:not(.fixed-nav) .main-nav>li>a {
+
+        color: rgb(204, 201, 21);
+
+    }
+
+    .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
+
+        background: transparent;
+
+        color: #6195FF;
+
+    }
+
+    .main-nav>li>a:after {
+
+        content: "";
+
+        display: block;
+
+        background-color: rgb(252, 0, 0);
+
+        height: 2px;
+
+        width: 0%;
+
+        -webkit-transition: 0.2s width;
+
+        transition: 0.2s width;
+
+    }
+
+    .main-nav>li>a:hover:after, .main-nav>li.active>a:after {
+
+        width: 100%;
+
+    }
+
+    #container{
+        margin-top:100px;
+        color:rgb(204, 201, 21);
+       
+        
+        margin-left: 2%;
+        margin-right:2%;
+    }
+    input{
+        background:transparent;
+        border-radius:10px;
+       
+        
+        border-color: rgb(204, 201, 21);
+        background-color: transparent;
+    }
+    br{
+        background-color:transparent;
+    }
+    button{
+       width:30%;
+       height:50px;
+       margin-left:35%;
+       background-color:rgb(204, 201, 21);
+       color:rgb(255, 255, 255);
+       
+       font-size: 30px;
+      
+       border-color: rgb(204, 201, 21);
+    }
+    button:hover{
+        font-size: 33px;
+        opacity: .8;
+        
+    }

@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    
+    
+   
+	<link href="https://fonts.googleapis.com/css?family=Montserrat:400,700%7CVarela+Round" rel="stylesheet">
+
+	
+</head>
+<body>
+
+    <!-- Header -->
+	<header id="home">
+		<!-- Background Image -->
+		<div class="image2">
+
+        <div class="overlay"></div>
+    	</div>
+		<!-- /Background Image -->
+
+		<!-- Nav -->
+			<!-- Nav -->
+
+			<nav id="nav" class="navbar nav-transparent">
+
+				<div class="container">
+	
+	
+	
+			
+	
+	
+	
+					<!--  Main navigation  -->
+					<ul id="list1" class="main-nav nav navbar-nav navbar-right" style="position:fixed;top:10%;margin-left:10%;transform: translate(-50%, -50%);display:inline">
+						<li><a href="#/home" style = "border-bottom: 3px solid rgb(252, 0, 0);padding-bottom: 0px;">Home</a></li>
+						<li><a href="#downloads">Downloads</a></li>
+						<li><a href= "#/about"> About </a> </li>
+						<li *ngIf="isLoggedIn()"><a href="#/login" (click)="onLogout()">Logout</a></li>
+	
+					</ul>
+					<!-- /Main navigation -->
+	
+	
+	
+				</div>
+	
+			</nav>
+		<!-- /Nav -->
+		
+		<div class="home-wrapper">
+			<div class="container">
+				<div class="row">
+
+					<!-- home content -->
+					<div class="col-md-10 col-md-offset-1">
+						<div *ngIf="isLoggedIn()" class="home-content" style="position: absolute;top:50%;left:40%;margin-right: -50%;transform: translate(-50%, -50%);">
+							<div class="row card">
+								
+									<h4>Upload your JSON file </h4>
+									<div id="fileSelector">
+										<input type="file" name="file" accept="*.json" id="fileUpload"
+										multiple ng2FileSelect [uploader]="uploader">
+									</div>
+									<div>
+										<div class="row uploadList" *ngFor="let item of uploader.queue">
+											<div class="col-sm-4">{{item.file.name}}</div>
+											<div class="col-sm-4">
+												<div class="progress">
+													<div class="progress-bar bg-success" 
+													[ngStyle]="{'width':item.progress+'%'}"></div>
+												</div>
+											</div>
+											<div class="col-sm-4">
+													<button type="button" class="btn btn-dark" (click)="item.upload()">Upload</button>
+													<button type="button" class="btn btn-danger" (click)="item.remove()">Cancel</button>
+											</div>
+										</div>                        
+									</div>
+									<div class="row" *ngIf="uploader?.queue?.length > 0">
+											<button type="button" class="btn btn-primary" (click)="uploader.uploadAll()">Upload All</button>
+									</div>
+							             
+							</div>
+							<div class="row card">
+								<h4>Your CSV files</h4>
+				
+								<div class="row" *ngFor="let item of attachmentList; let i = index"
+								style="margin:10px;padding:5px;background-color:rgb(231, 229, 229); border-radius:5px; line-height:40px;">
+									<div class="col-sm-7">{{item.name}}</div>
+									<div class="col-sm-5" style="text-align:center;"><button type="button" class="btn btn-primary" (click)="download(item._id,item.name)">Download</button></div>
+								</div>
+							</div>
+				</div>
+					</div>
+					<!-- /home content -->
+
+				</div>
+			</div>
+		</div>
+		
+
+    </header>
+    
+
+
+    <!-- Footer -->
+	<footer id="footer" class="sm-padding bg-dark" >
+
+		<!-- Container -->
+		<div class="container">
+				<h5 class="CR"> Created By Karim Nashaat</h5>
+
+		</div>
+		<!-- /Container -->
+
+	</footer>
+	<!-- /Footer -->
+</body>
+</html>
+
+
+
+
+
+
+
+

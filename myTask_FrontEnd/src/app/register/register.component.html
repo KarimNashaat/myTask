@@ -1,0 +1,94 @@
+<div id="registerPage">
+
+
+
+
+
+    <div id="session">
+        <div id="backgroundimage">
+  
+            <div class="overlay"></div>
+          </div>
+          <nav id="nav" class="navbar nav-transparent">
+
+              <div class="container">
+        
+        
+        
+                <div class="navbar-header">
+        
+               
+        
+                  
+        
+                </div>
+        
+        
+        
+		
+        
+        
+        
+              </div>
+        
+            </nav>
+          <!-- /Nav -->
+
+
+
+
+  <br>
+<div id="container">
+  
+    <h1 class="text-center">Create Profile</h1>
+    <form>
+      <div class="form-row">
+        <div class="form-group col-md-6">
+          <label>
+            <span style="color: red">* </span>First Name</label>
+          <input type="text" (keyup)="onFirstName($event)" required class="form-control" placeholder="First Name">
+        </div>
+        <div class="form-group col-md-6">
+          <label>
+            <span style="color: red">* </span>Last Name</label>
+          <input type="text" (keyup)="onLastName($event)" required class="form-control" placeholder="Last Name">
+        </div>
+      </div>
+      <div class=form-row>
+        <div class="form-group col-md-6">
+          <label>
+            <span style="color: red">* </span>Email</label>
+          <input type="email" (keyup)="onEmail($event)" required class="form-control" placeholder="Email">
+
+        </div>
+        <div class="form-group col-md-6">
+          <label for="password">
+            <span style="color: red">* </span>Password</label>
+          <input type="password" (keyup)="onPassword($event)" required class="form-control" id="password" placeholder="Password">
+        </div>
+      </div>
+      <div class=form-row>
+        <div class="form-group col-md-6">
+          <div class="alert alert-danger" *ngIf="showEmailExists">Email already exists</div>
+        </div>
+      </div>
+      <div class=form-row>
+        <div class="form-group col-md-6">
+          <label for="confirmPassword">
+            <span style="color: red">* </span>Confirm Password</label>
+          <input type="password" (keyup)="onConfirmPassword($event)" required class="form-control" id="confirmPassword" placeholder="Confirm Password">
+        </div>
+      </div>
+      <div class=form-row>
+        <div class="form-group col-md-6">
+          <div class="alert alert-danger" *ngIf="showPassNotMatch">Passwords does not match</div>
+        </div>
+      </div>
+      <button (click)="postProfile()" type="submit" >Register</button>
+    </form>
+    <br>
+  </div>
+
+</div>
+
+

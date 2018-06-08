@@ -1,0 +1,658 @@
+
+
+body {
+
+    font-family: 'Varela Round', sans-serif;
+
+    font-size: 16px;
+
+    line-height: 1.6;
+
+    overflow-x: hidden;
+
+    color: #868F9B;
+
+    margin:0;
+
+
+
+}
+
+
+
+h1{
+
+    font-family: 'Montserrat', sans-serif;
+
+    font-weight: 700;
+
+    margin-top: 0px;
+
+    margin-bottom: 20px;
+
+    color: #10161A;
+
+    font-size: 54px;
+
+}
+
+
+
+
+
+a {
+
+    color: #6195FF;
+
+    text-decoration: none;
+
+    -webkit-transition: 0.2s opacity;
+
+    transition: 0.2s opacity;
+
+}
+
+
+
+a:hover, a:focus {
+
+    text-decoration: none;
+
+    outline: none;
+
+    opacity: 0.8;
+
+    color: #6195FF;
+
+}
+
+
+
+.col-md-10{
+
+    position:relative;min-height:1px;padding-right:50px;padding-left:50px
+
+}
+
+
+
+.white-text {
+
+    color: rgb(204, 201, 21);
+
+   
+
+}
+
+
+
+
+
+ ol {
+
+    margin: 0;
+
+    padding: 0;
+
+    list-style: none
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* --  background section  -- */
+
+
+
+.bg-grey {
+
+    background-color: #FAFAFA;
+
+    border-top: 1px solid #EEE;
+
+    border-bottom: 1px solid #EEE;
+
+}
+
+
+
+.bg-dark {
+
+    background-color: rgb(0, 0, 0);
+
+}
+
+
+
+
+
+
+
+
+
+.image1 {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    z-index: -1;
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-attachment: fixed;
+
+    background-image: url("../../assets/images/files.jpeg");
+
+}
+
+.image2{
+
+   height:750px;
+
+    left: 0;
+
+    top: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    z-index: -1;
+
+    background-position: center;
+
+    background-size: cover;
+
+    background-attachment: fixed;
+
+    background-image: url("../../assets/images/files.jpeg");
+
+    
+
+}
+
+
+
+.image2 .overlay {
+
+    position: absolute;
+
+    left: 0;
+
+    top: 0;
+
+    right: 0;
+
+    bottom: 0;
+
+    opacity: .6;
+
+    background: #1C1D21;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+.main-btn{
+
+    display: inline-block;
+
+    padding: 10px 35px;
+
+    margin: 3px;
+
+    border: 2px solid transparent;
+
+    border-radius: 3px;
+
+    -webkit-transition: 0.2s opacity;
+
+    transition: 0.2s opacity;
+
+}
+
+
+
+.main-btn {
+
+    background: rgb(204, 201, 21);;
+
+    color: #FFF;
+
+    font-size: 50;
+
+}
+
+
+
+
+
+
+
+.main-btn:hover, {
+
+    opacity: 0.8;
+
+}
+
+
+
+
+
+/*------------------------------------*\
+
+	Logo
+
+\*------------------------------------*/
+
+
+
+.navbar-brand {
+
+    padding: 0px 30px;
+
+}
+
+
+
+.navbar-brand .logo-alt {
+
+    max-height: 60px;
+
+    display: block;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+
+	Navigation
+
+\*------------------------------------*/
+
+
+
+#nav {
+
+    
+
+    padding: 20px 0px;
+
+    background: #FFF;
+
+    -webkit-transition: 0.2s padding;
+
+    transition: 0.2s padding;
+
+    z-index: 999;
+
+    position: fixed;
+
+    left: 0;
+
+    right: 0;
+
+    
+
+    
+
+}
+
+
+
+#nav.navbar {
+
+    border: none;
+
+    border-radius: 0;
+
+    margin-bottom: 0px;
+
+}
+
+
+
+
+
+
+
+#nav.nav-transparent {
+
+    background: transparent;
+
+}
+
+
+
+
+
+/* -- default nav -- */
+
+
+
+
+
+    .main-nav li {
+
+        padding: 10px 10px;
+
+        float: left;
+
+        
+
+
+
+    }
+
+    .main-nav li a {
+
+        font-family: 'Varela Round', sans-serif;
+        
+        font-size: 20px;
+
+        -webkit-transition: 0.2s color;
+
+        transition: 0.2s color;
+
+        
+
+    }
+
+    .main-nav>li>a {
+
+        color: #10161A;
+
+        padding: 15px 0px;
+
+        
+
+    }
+
+    #nav.nav-transparent:not(.fixed-nav) .main-nav>li>a {
+
+        color: rgb(204, 201, 21);
+
+    }
+
+    .main-nav>li>a:hover, .main-nav>li>a:focus, .main-nav>li.active>a {
+
+        background: transparent;
+
+        color: #6195FF;
+
+    }
+
+    .main-nav>li>a:after {
+
+        content: "";
+
+        display: block;
+
+        background-color: rgb(252, 0, 0);
+
+        height: 2px;
+
+        width: 0%;
+
+        -webkit-transition: 0.2s width;
+
+        transition: 0.2s width;
+
+    }
+
+    .main-nav>li>a:hover:after, .main-nav>li.active>a:after {
+
+        width: 100%;
+
+    }
+
+    
+
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*------------------------------------*\
+
+	Header
+
+\*------------------------------------*/
+
+
+
+header {
+
+    position: relative;
+
+}
+
+
+
+#home {
+
+    height: 100vh;
+
+}
+
+
+
+#home .home-wrapper {
+
+    position: absolute;
+
+    left: 200px;
+
+    right: 0px;
+
+    top: 50%;
+
+    -webkit-transform: translateY(-50%);
+
+    -ms-transform: translateY(-50%);
+
+    transform: translateY(-50%);
+
+    text-align: center;
+
+}
+
+
+
+.home-content h1 {
+
+  text-transform: uppercase;
+
+}
+
+.home-content button {
+
+  margin-top: 20px;
+
+}
+
+
+
+.header-wrapper h2 {
+
+    display: inline-block;
+
+    margin-bottom: 0px;
+
+}
+
+
+
+.header-wrapper .breadcrumb {
+
+    float: right;
+
+    background: transparent;
+
+    margin-bottom: 0px;
+
+}
+
+
+
+.header-wrapper .breadcrumb .breadcrumb-item.active {
+
+    color: #868F9B;
+
+}
+
+
+
+.breadcrumb>li+li:before {
+
+    color: #868F9B;
+
+}
+
+/*
+
+----------------------------------------------------------------------
+
+---------------------------------------------------------------------------------
+
+----------------------------------------------------------------------------------------
+
+-
+
+-
+
+*/
+
+
+
+#footer {
+
+    position: relative;
+
+    max-height: 175px;
+
+    
+
+
+
+}
+
+
+
+.footer-logo {
+
+    text-align: left;
+
+    margin-bottom: 0;
+
+    
+
+    
+
+}
+
+
+
+.footer-logo>a>img {
+
+    
+
+    max-height: 80px;
+
+}
+
+.CR{text-align: center;
+
+  padding-top: 20px;
+
+    
+
+     color: rgb(204, 201, 21);}
+
+
+.color-red{
+    color: rgb(252, 0, 0) !important;
+}
+.header-section{
+    height: 80px;
+    line-height: 80px;
+    color: beige;
+    background-color: rgb(46, 43, 43);
+    font-size: 24px;
+    padding-left: 20px;
+}
+
+.card{
+    background-color: white;
+    box-shadow:0 3px 5px -1px rgba(0,0,0,.2), 0 6px 10px 0 rgba(0,0,0,.14), 0 1px 18px 0 rgba(0,0,0,.12);
+    color:black;
+    margin: 20px;
+    padding: 10px;
+}
+
+.uploadList{
+    padding: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
